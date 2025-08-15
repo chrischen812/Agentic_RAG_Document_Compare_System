@@ -336,9 +336,7 @@ class OntologyManager:
     async def _load_ontologies(self):
         """Load ontologies from OWL files."""
         ontology_files = {
-            "healthcare": "healthcare.owl",
-            "legal": "legal.owl", 
-            "financial": "financial.owl"
+            "healthcare": "healthcare.owl"
         }
         
         for domain, filename in ontology_files.items():
