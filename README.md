@@ -111,7 +111,7 @@ Preferred communication style: Simple, everyday language.
 
 
 
-## Development Environment using Python native virtual machine 
+## Development Environment using Python native Virtual Machine 
 
 1. **Setup and activate Virtual Environment:**
    ```bash
@@ -150,7 +150,7 @@ Preferred communication style: Simple, everyday language.
 
 
 
-## Development Environment using Docker, refer to the 
+## Development Environment using Docker, refer to the "Docker" folder README
 
 1. **Start development container:**
    ```bash
