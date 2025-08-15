@@ -472,10 +472,3 @@ class OntologyManager:
         # For now, we'll store the structure and let the file creation happen elsewhere
         pass
     
-    async def _create_legal_ontology(self, file_path: str):
-        """Create a base legal ontology."""
-        pass
-    
-    async def _create_financial_ontology(self, file_path: str):
-        """Create a base financial ontology."""
-        pass
