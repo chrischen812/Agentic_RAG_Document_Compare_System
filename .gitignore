@@ -1,0 +1,27 @@
+.DS_Store
+node_modules
+.tmp
+.env
+Videos/
+__pycache__/
+venv/
+chroma_db/
+.vscode/
+.local
+
+# Git and version control
+.git
+
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
