@@ -5,9 +5,11 @@ node_modules
 Videos/
 __pycache__/
 venv/
+ENV/
 chroma_db/
 .vscode/
 .local
+testing/
 
 # Git and version control
 .git
