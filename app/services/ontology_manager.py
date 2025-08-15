@@ -467,6 +467,6 @@ class OntologyManager:
     async def _create_healthcare_ontology(self, file_path: str):
         """Create a base healthcare ontology."""
         # This creates the content that would be in the healthcare.owl file
-        # For now, we'll store the structure and let the file creation happen elsewhere
+        # For now, we'll store the structure and let the file creation be done manually via Protege or similar tools        
         pass
     
