@@ -81,7 +81,7 @@ The system integrates multiple AI services and frameworks to create a comprehens
 
 ## Environment Variables
 
-Create a `.env` file in the docker directory:
+Create a `.env` file in the main directory:
 
 ```env
 # Required
