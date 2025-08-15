@@ -1,0 +1,24 @@
+Healthcare Coverage Comparison Document
+    
+Plan A - Basic Coverage:
+- Monthly Premium: $200
+- Deductible: $2000
+- Emergency Room: $300 copay
+- Primary Care: $25 copay
+- Prescription Coverage: 80% after deductible
+
+Plan B - Premium Coverage:
+- Monthly Premium: $400
+- Deductible: $500
+- Emergency Room: $100 copay
+- Primary Care: $15 copay
+- Prescription Coverage: $10 generic, $25 brand
+
+Network Information:
+- 5000+ healthcare providers
+- 50+ hospitals
+- 24/7 nurse hotline
+- Online appointment scheduling
+
+Contact: customer.service@healthplan.com
+Phone: 1-800-HEALTH-1
