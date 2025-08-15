@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  rag-api-dev:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      target: builder  # Use builder stage for development with more tools
+    container_name: agentic-rag-dev
+    ports:
+      - "5000:5000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - ENVIRONMENT=development
+      - HOST=0.0.0.0
+      - PORT=5000
+      - PYTHONPATH=/app
+    volumes:
+      # Mount source code for live development
+      - ../app:/app/app
+      - ../templates:/app/templates
+      - ../static:/app/static
+      - ../ontologies:/app/ontologies
+      - ../main.py:/app/main.py
+      # Persist data
+      - rag_dev_data:/app/data
+      # Development documents
+      - ./dev-documents:/app/documents:ro
+    restart: unless-stopped
+    command: ["python", "-m", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "5000", "--reload"]
+
+volumes:
+  rag_dev_data:
+    driver: local
+
+networks:
+  default:
+    name: rag-dev-network

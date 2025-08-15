@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:healthcare="http://example.com/healthcare#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+
+  <!-- Ontology Declaration -->
+  <owl:Ontology rdf:about="http://example.com/healthcare#"/>
+
+  <!-- Classes -->
+  <owl:Class rdf:about="http://example.com/healthcare#Document">
+    <rdfs:label xml:lang="en">Healthcare Document</rdfs:label>
+    <rdfs:comment xml:lang="en">Base class for all healthcare documents</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Coverage">
+    <rdfs:label xml:lang="en">Coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Insurance coverage information</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Benefit">
+    <rdfs:label xml:lang="en">Benefit</rdfs:label>
+    <rdfs:comment xml:lang="en">Healthcare benefit or service</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Limitation">
+    <rdfs:label xml:lang="en">Limitation</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage limitation or restriction</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Exclusion">
+    <rdfs:label xml:lang="en">Exclusion</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage exclusion</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Provider">
+    <rdfs:label xml:lang="en">Healthcare Provider</rdfs:label>
+    <rdfs:comment xml:lang="en">Healthcare service provider</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Condition">
+    <rdfs:label xml:lang="en">Medical Condition</rdfs:label>
+    <rdfs:comment xml:lang="en">Medical condition or diagnosis</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Treatment">
+    <rdfs:label xml:lang="en">Medical Treatment</rdfs:label>
+    <rdfs:comment xml:lang="en">Medical treatment or procedure</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Medication">
+    <rdfs:label xml:lang="en">Medication</rdfs:label>
+    <rdfs:comment xml:lang="en">Pharmaceutical medication</rdfs:comment>
+  </owl:Class>
+
+  <!-- Financial Classes -->
+  <owl:Class rdf:about="http://example.com/healthcare#Premium">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#FinancialCost"/>
+    <rdfs:label xml:lang="en">Insurance Premium</rdfs:label>
+    <rdfs:comment xml:lang="en">Regular payment for insurance coverage</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Deductible">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#FinancialCost"/>
+    <rdfs:label xml:lang="en">Deductible</rdfs:label>
+    <rdfs:comment xml:lang="en">Amount paid before insurance coverage begins</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Copayment">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#FinancialCost"/>
+    <rdfs:label xml:lang="en">Copayment</rdfs:label>
+    <rdfs:comment xml:lang="en">Fixed amount paid for healthcare services</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#Coinsurance">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#FinancialCost"/>
+    <rdfs:label xml:lang="en">Coinsurance</rdfs:label>
+    <rdfs:comment xml:lang="en">Percentage of costs shared between insurer and patient</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#OutOfPocketMaximum">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#FinancialCost"/>
+    <rdfs:label xml:lang="en">Out-of-Pocket Maximum</rdfs:label>
+    <rdfs:comment xml:lang="en">Maximum amount patient pays in a benefit period</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#FinancialCost">
+    <rdfs:label xml:lang="en">Financial Cost</rdfs:label>
+    <rdfs:comment xml:lang="en">Base class for healthcare-related costs</rdfs:comment>
+  </owl:Class>
+
+  <!-- Service Classes -->
+  <owl:Class rdf:about="http://example.com/healthcare#PrimaryCareService">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#HealthcareService"/>
+    <rdfs:label xml:lang="en">Primary Care Service</rdfs:label>
+    <rdfs:comment xml:lang="en">Basic healthcare services provided by primary care physicians</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#SpecialistService">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#HealthcareService"/>
+    <rdfs:label xml:lang="en">Specialist Service</rdfs:label>
+    <rdfs:comment xml:lang="en">Healthcare services provided by medical specialists</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#EmergencyService">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#HealthcareService"/>
+    <rdfs:label xml:lang="en">Emergency Service</rdfs:label>
+    <rdfs:comment xml:lang="en">Emergency medical services and urgent care</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#PreventiveService">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#HealthcareService"/>
+    <rdfs:label xml:lang="en">Preventive Service</rdfs:label>
+    <rdfs:comment xml:lang="en">Preventive healthcare services like screenings and vaccinations</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#HealthcareService">
+    <rdfs:label xml:lang="en">Healthcare Service</rdfs:label>
+    <rdfs:comment xml:lang="en">Base class for all healthcare services</rdfs:comment>
+  </owl:Class>
+
+  <!-- Plan Types -->
+  <owl:Class rdf:about="http://example.com/healthcare#HMO">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#InsurancePlan"/>
+    <rdfs:label xml:lang="en">Health Maintenance Organization</rdfs:label>
+    <rdfs:comment xml:lang="en">HMO insurance plan with network restrictions</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#PPO">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#InsurancePlan"/>
+    <rdfs:label xml:lang="en">Preferred Provider Organization</rdfs:label>
+    <rdfs:comment xml:lang="en">PPO insurance plan with flexible provider network</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#EPO">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#InsurancePlan"/>
+    <rdfs:label xml:lang="en">Exclusive Provider Organization</rdfs:label>
+    <rdfs:comment xml:lang="en">EPO insurance plan with exclusive provider network</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#HDHP">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#InsurancePlan"/>
+    <rdfs:label xml:lang="en">High Deductible Health Plan</rdfs:label>
+    <rdfs:comment xml:lang="en">High deductible health plan often paired with HSA</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#InsurancePlan">
+    <rdfs:label xml:lang="en">Insurance Plan</rdfs:label>
+    <rdfs:comment xml:lang="en">Base class for healthcare insurance plans</rdfs:comment>
+  </owl:Class>
+
+  <!-- Document Types -->
+  <owl:Class rdf:about="http://example.com/healthcare#InsurancePolicy">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Document"/>
+    <rdfs:label xml:lang="en">Insurance Policy</rdfs:label>
+    <rdfs:comment xml:lang="en">Health insurance policy document</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#BenefitsSummary">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Document"/>
+    <rdfs:label xml:lang="en">Benefits Summary</rdfs:label>
+    <rdfs:comment xml:lang="en">Summary of health benefits</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#ClaimForm">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Document"/>
+    <rdfs:label xml:lang="en">Claim Form</rdfs:label>
+    <rdfs:comment xml:lang="en">Insurance claim form</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#MedicalRecord">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Document"/>
+    <rdfs:label xml:lang="en">Medical Record</rdfs:label>
+    <rdfs:comment xml:lang="en">Patient medical record</rdfs:comment>
+  </owl:Class>
+
+  <!-- Coverage Types -->
+  <owl:Class rdf:about="http://example.com/healthcare#MedicalCoverage">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:label xml:lang="en">Medical Coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">General medical coverage</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#DentalCoverage">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:label xml:lang="en">Dental Coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Dental care coverage</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#VisionCoverage">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:label xml:lang="en">Vision Coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Vision care coverage</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#MentalHealthCoverage">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:label xml:lang="en">Mental Health Coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Mental health services coverage</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://example.com/healthcare#PrescriptionCoverage">
+    <rdfs:subClassOf rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:label xml:lang="en">Prescription Coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Prescription drug coverage</rdfs:comment>
+  </owl:Class>
+
+  <!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="http://example.com/healthcare#hasCoverage">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Document"/>
+    <rdfs:range rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:label xml:lang="en">has coverage</rdfs:label>
+    <rdfs:comment xml:lang="en">Document has coverage type</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.com/healthcare#hasBenefit">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:range rdf:resource="http://example.com/healthcare#Benefit"/>
+    <rdfs:label xml:lang="en">has benefit</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage includes benefit</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.com/healthcare#hasLimitation">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:range rdf:resource="http://example.com/healthcare#Limitation"/>
+    <rdfs:label xml:lang="en">has limitation</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage has limitation</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.com/healthcare#hasExclusion">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:range rdf:resource="http://example.com/healthcare#Exclusion"/>
+    <rdfs:label xml:lang="en">has exclusion</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage excludes service</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.com/healthcare#coversCondition">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:range rdf:resource="http://example.com/healthcare#Condition"/>
+    <rdfs:label xml:lang="en">covers condition</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage applies to condition</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://example.com/healthcare#coversTreatment">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:range rdf:resource="http://example.com/healthcare#Treatment"/>
+    <rdfs:label xml:lang="en">covers treatment</rdfs:label>
+    <rdfs:comment xml:lang="en">Coverage applies to treatment</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <!-- Datatype Properties -->
+  <owl:DatatypeProperty rdf:about="http://example.com/healthcare#deductibleAmount">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">deductible amount</rdfs:label>
+    <rdfs:comment xml:lang="en">Insurance deductible amount</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.com/healthcare#copayAmount">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Benefit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">copay amount</rdfs:label>
+    <rdfs:comment xml:lang="en">Copayment amount</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.com/healthcare#coveragePercentage">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Coverage"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">coverage percentage</rdfs:label>
+    <rdfs:comment xml:lang="en">Percentage of coverage</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.com/healthcare#maximumBenefit">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#Benefit"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    <rdfs:label xml:lang="en">maximum benefit</rdfs:label>
+    <rdfs:comment xml:lang="en">Maximum benefit amount</rdfs:comment>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://example.com/healthcare#policyNumber">
+    <rdfs:domain rdf:resource="http://example.com/healthcare#InsurancePolicy"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label xml:lang="en">policy number</rdfs:label>
+    <rdfs:comment xml:lang="en">Insurance policy number</rdfs:comment>
+  </owl:DatatypeProperty>
+
+</rdf:RDF>

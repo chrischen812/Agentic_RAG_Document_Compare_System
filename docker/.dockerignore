@@ -1,0 +1,67 @@
+# Git and version control
+.git
+.gitignore
+.gitattributes
+
+# Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+/logs/
+
+# Test files and coverage
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+.nox/
+
+# Documentation
+*.md
+docs/
+
+# Docker files (to avoid recursion)
+docker/
+Dockerfile*
+docker-compose*.yml
+
+# Local development files
+.env.local
+.env.development
+test_*.py
+*_test.py
+
+# Data directories that shouldn't be in image
+/data/chroma_db/
+/uploads/
+temp_*
+
+# Replit specific files
+.replit
+replit.nix
+.breakpoints
+.upm
