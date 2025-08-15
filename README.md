@@ -4,7 +4,7 @@ This is a fully operational Intelligent Agentic RAG (Retrieval-Augmented Generat
 
 The system integrates multiple AI services and frameworks to create a comprehensive document intelligence platform that can understand, classify, and analyze documents across HealthCare Benefits domain while maintaining semantic relationships through ontological structures.
 
-![Alt text](./media/screenshot1.png)
+![Alt text](./media/Screenshot1.jpg)
 
 
 # System Architecture
