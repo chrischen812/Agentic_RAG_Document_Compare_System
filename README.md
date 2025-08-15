@@ -37,9 +37,10 @@ The system integrates multiple AI services and frameworks to create a comprehens
 - **Semantic Search**: Embedding-based similarity search with metadata filtering
 
 ## Knowledge Management
-- **Ontology Manager**: RDFLib-based ontology creation and management
-- **Domain-Specific Structures**: Separate ontologies for healthcare, legal, and financial domains
-- **Concept Mapping**: Automatic linking of document content to ontological concepts
+- **Ontology Manager**: Combines RDFLib-based programmatic ontology creation with manual refinement using Protégé, a widely adopted tool for editing and visualizing OWL and RDF schemas.
+- **Domain-Specific Structures**: Maintains distinct ontologies tailored to healthcare, legal, and financial domains, enabling modular reasoning and compliance-aware modeling.
+- **Concept Mapping**: Automates the linking of document content to ontological concepts, with Protégé facilitating validation, class hierarchy adjustments, and semantic consistency checks.
+
 
 # External Dependencies
 
