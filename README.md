@@ -2,7 +2,7 @@
 
 This is a fully operational Intelligent Agentic RAG (Retrieval-Augmented Generation) System built with FastAPI and LangGraph. The system provides advanced document classification, ontological mapping, and comparative analysis capabilities for PDF documents. It uses AI agents to perform multi-step reasoning for intelligent document retrieval, analysis, and cross-document comparison.
 
-The system integrates multiple AI services and frameworks to create a comprehensive document intelligence platform that can understand, classify, and analyze documents across different domains (healthcare, legal, financial) while maintaining semantic relationships through ontological structures.
+The system integrates multiple AI services and frameworks to create a comprehensive document intelligence platform that can understand, classify, and analyze documents across healthcare Benefits domain while maintaining semantic relationships through ontological structures.
 
 
 
