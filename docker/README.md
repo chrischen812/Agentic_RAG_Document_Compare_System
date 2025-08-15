@@ -2,6 +2,9 @@
 
 This directory contains Docker configuration files for deploying the Agentic RAG System in containerized environments.
 
+[Watch demo](./media/Recording.mp4)
+
+
 ## Quick Start
 
 ### Development Environment
