@@ -2,7 +2,7 @@
 
 This directory contains Docker configuration files for deploying the Agentic RAG System in containerized environments.
 
-![Demo GIF](./media/Recording.gif)
+![Demo GIF](../media/Recording.gif)
 
 
 
