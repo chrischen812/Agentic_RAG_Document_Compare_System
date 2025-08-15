@@ -132,7 +132,7 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 
 
-## Development Environment using Docker, refer to the "Docker" folder README
+## Development Environment using Docker, refer to the "Docker" folder's README.md for additional detail
 
 1. **Start development container:**
    ```bash
@@ -143,3 +143,6 @@ GEMINI_API_KEY=your_gemini_api_key_here
 2. **Access the application:**
    - API: http://localhost:5000
    - Documentation: http://localhost:5000/docs
+
+
+
