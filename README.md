@@ -78,7 +78,15 @@ The system integrates multiple AI services and frameworks to create a comprehens
 - **LangChain**: Tool integration and agent utilities
 
 
+## Environment Variables
 
+Create a `.env` file in the docker directory:
+
+```env
+# Required
+GEMINI_API_KEY=your_gemini_api_key_here
+
+```
 
 
 ## Development Environment using Python native Virtual Machine 
