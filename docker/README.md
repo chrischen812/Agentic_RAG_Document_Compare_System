@@ -6,34 +6,16 @@ This directory contains Docker configuration files for deploying the Agentic RAG
 
 ### Development Environment
 
-1. **Set up environment variables:**
-   ```bash
-   cp .env.example .env
-   # Edit .env and add your GEMINI_API_KEY
-   ```
-
-2. **Start development container:**
+1. **Start development container:**
    ```bash
    cd docker
    docker-compose -f docker-compose.dev.yml up --build
    ```
 
-3. **Access the application:**
+2. **Access the application:**
    - API: http://localhost:5000
    - Documentation: http://localhost:5000/docs
 
-### Production Environment
-
-1. **Build and start production containers:**
-   ```bash
-   cd docker
-   docker-compose up --build -d
-   ```
-
-2. **With Nginx reverse proxy:**
-   ```bash
-   docker-compose --profile production up --build -d
-   ```
 
 ## Configuration Files
 
@@ -44,25 +26,12 @@ Multi-stage Docker build optimized for production:
 - Non-root user execution
 - Health checks included
 
-### docker-compose.yml
-Production deployment with:
-- Persistent data volumes
-- Environment variable configuration
-- Health checks and restart policies
-- Optional Nginx reverse proxy
-
 ### docker-compose.dev.yml
 Development environment with:
 - Live code mounting for hot reload
 - Development tools included
 - Extended debugging capabilities
 
-### nginx.conf
-Production-ready Nginx configuration with:
-- Rate limiting for API endpoints
-- Security headers
-- File upload optimization
-- SSL/HTTPS support (commented)
 
 ## Environment Variables
 
@@ -91,64 +60,6 @@ The container includes health checks that verify:
 - API endpoints are accessible
 - Dependencies are properly initialized
 
-## Production Deployment
-
-### Basic Deployment
-```bash
-# Clone repository
-git clone <your-repo>
-cd <repo-name>
-
-# Set up environment
-cd docker
-cp .env.example .env
-# Edit .env with your API keys
-
-# Deploy
-docker-compose up --build -d
-
-# View logs
-docker-compose logs -f rag-api
-```
-
-### With Reverse Proxy
-```bash
-# Deploy with Nginx
-docker-compose --profile production up --build -d
-
-# Access via HTTP/HTTPS
-curl http://localhost/api/documents
-```
-
-### Scaling (Future Enhancement)
-```bash
-# Scale API containers
-docker-compose up --scale rag-api=3 -d
-```
-
-## Security Considerations
-
-1. **Non-root execution**: Application runs as `appuser`
-2. **Minimal attack surface**: Production image uses `python:3.11-slim`
-3. **Security headers**: Nginx adds security headers
-4. **Rate limiting**: API endpoints are rate-limited
-5. **Input validation**: File upload size limits enforced
-
-## Monitoring and Logging
-
-```bash
-# View application logs
-docker-compose logs -f rag-api
-
-# Check container health
-docker-compose ps
-
-# Monitor resource usage
-docker stats
-
-# Execute commands in container
-docker-compose exec rag-api bash
-```
 
 ## Troubleshooting
 
