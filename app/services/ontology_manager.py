@@ -452,9 +452,7 @@ class OntologyManager:
     async def _create_base_ontologies(self):
         """Create base ontologies if they don't exist."""
         base_ontologies = {
-            "healthcare": self._create_healthcare_ontology,
-            "legal": self._create_legal_ontology,
-            "financial": self._create_financial_ontology
+            "healthcare": self._create_healthcare_ontology
         }
         
         for domain, creator_func in base_ontologies.items():
