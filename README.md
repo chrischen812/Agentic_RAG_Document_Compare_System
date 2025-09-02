@@ -133,7 +133,8 @@ GEMINI_API_KEY=your_gemini_api_key_here
 
 
 
-## Development Environment using Docker, refer to the "Docker" folder's README.md for additional detail
+## Development Environment using Docker
+Docker setup instructions are available in the 'Docker' folder's README.md.
 
 1. **Start development container:**
    ```bash
