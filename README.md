@@ -94,7 +94,7 @@ GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 
-## Development Environment using Python native Virtual Machine 
+## Development Environment using Python’s native virtual environment
 
 1. **Setup and activate Virtual Environment:**
    ```bash
