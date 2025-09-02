@@ -20,7 +20,6 @@ This directory contains Docker configuration files for deploying the Agentic RAG
    - API: http://localhost:5000
    - Documentation: http://localhost:5000/docs
 
-
 ## Configuration Files
 
 ### Dockerfile
